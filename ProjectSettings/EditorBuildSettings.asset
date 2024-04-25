@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuestionScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: f66ad080f160fd542baaa6380bb567af
+  - enabled: 1
+    path: Assets/Scenes/school.unity
+    guid: bb01797f2605c6c4695417b18f762a63
+  - enabled: 1
+    path: Assets/Scenes/select.unity
+    guid: 34e84f05b39788d48846dcbb168a00e7
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: d5de72925954dec47a7cfdf820dcb9a3,
       type: 2}
