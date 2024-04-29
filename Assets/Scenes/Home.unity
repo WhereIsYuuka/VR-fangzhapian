@@ -3651,6 +3651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  duration: 1
 --- !u!114 &520356570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4085,6 +4086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 0.0015
+  duration: 1
 --- !u!1 &599384604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7068278123547500686, guid: 0bb7e2d2dd1ca30478c670b90ac27dea,
@@ -4151,6 +4153,74 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4982905, y: 2.3881166, z: 4.826042}
   m_Center: {x: 0, y: 1.1662048, z: -0.00000047683716}
+--- !u!1001 &622826750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4030331532914373269, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929738767231772932, guid: 51966fa428e348d4bbbc12f70823e526,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51966fa428e348d4bbbc12f70823e526, type: 3}
 --- !u!1001 &637117403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4534,6 +4604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  duration: 1
 --- !u!114 &664907719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4547,6 +4618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  duration: 1
 --- !u!114 &664907720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5467,6 +5539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 2.87033
+  duration: 1
 --- !u!1 &805845618
 GameObject:
   m_ObjectHideFlags: 0
@@ -6377,6 +6450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 2.87033
+  duration: 1
 --- !u!4 &950896171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 677336156131347977, guid: 80e5bbfa6aa12b34ca98423c9e7a0f86,
@@ -6571,6 +6645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1.7867
+  duration: 1
 --- !u!114 &955464034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8018,6 +8093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  duration: 1
 --- !u!114 &1141455110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8770,6 +8846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  duration: 1
 --- !u!114 &1383874471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9702,6 +9779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  duration: 1
 --- !u!114 &1587588816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14404,4 +14482,5 @@ SceneRoots:
   - {fileID: 144431776}
   - {fileID: 1379987461}
   - {fileID: 719870601}
+  - {fileID: 622826750}
   - {fileID: 503969087}

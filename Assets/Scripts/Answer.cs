@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
 
 public class Answer : MonoBehaviour
 {
     //读取文档
     string[][] ArrayX;//题目数据
     string[] lineArray;//读取到题目数据
-    private int topicMax = 0;//最大题数
+    private int topicMax = 10;//最大题数
     private List<bool> isAnserList = new List<bool>();//存放是否答过题的状态
 
     //加载题目
@@ -28,10 +29,13 @@ public class Answer : MonoBehaviour
     public Button BtnTip;//消息提醒
     public Button BtnJump;//跳转题目
     public Button Reload;//重新加载
-    public InputField jumpInput;//跳转题目
     public Text TextAccuracy;//正确率
     private int anserint = 0;//已经答过几题
     private int isRightNum = 0;//正确题数
+
+    //设置答题后的active状态
+    public GameObject jumpPoint;//传送点
+    public Text jumpText;//传送点提示信息
 
     void Awake()
     {
@@ -49,8 +53,9 @@ public class Answer : MonoBehaviour
         BtnTip.onClick.AddListener(() => Select_Answer(0));
         BtnBack.onClick.AddListener(() => Select_Answer(1));
         BtnNext.onClick.AddListener(() => Select_Answer(2));
-        BtnJump.onClick.AddListener(() => Select_Answer(3));
-        Reload.onClick.AddListener(() => Select_Answer(4));
+        Reload.onClick.AddListener(() => Select_Answer(3));
+
+        
     }
 
 
@@ -70,7 +75,7 @@ public class Answer : MonoBehaviour
             ArrayX[i] = lineArray[i].Split(':');
         }
         //设置题目状态
-        topicMax = lineArray.Length;
+        //topicMax = lineArray.Length;
         for (int x = 0; x < topicMax + 1; x++)
         {
             isAnserList.Add(false);
@@ -148,23 +153,12 @@ public class Answer : MonoBehaviour
                 }
                 else
                 {
-                    tipsText.text = "<color=#27FF02FF>" + "太棒了，恭喜你完成了所有的题目！" + "</color>";
+                    tipsText.text = "<color=#27FF02FF>" + "恭喜你完成了所有题目，新的传送点已经打开！" + "</color>";
+                    jumpPoint.GetComponent<TeleportPoint>().locked = false;
+                    jumpText.text = "该传送点已经打开！";
                 }
                 break;
-            case 3://跳转
-                int x = int.Parse(jumpInput.text) - 1;
-                if (x >= 0 && x < topicMax)
-                {
-                    topicIndex = x;
-                    jumpInput.text = "";
-                    LoadAnswer();
-                }
-                else
-                {
-                    tipsText.text = "<color=#27FF02FF>" + "不在范围内！" + "</color>";
-                }
-                break;
-            case 4://打乱后重新加载
+            case 3://打乱后重新加载
                 ShuffleArray();
                 TitleReload();
                 break;
