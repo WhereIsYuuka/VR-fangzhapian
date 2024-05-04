@@ -155,7 +155,7 @@ public class Answer : MonoBehaviour
                 {
                     tipsText.text = "<color=#27FF02FF>" + "恭喜你完成了所有题目，新的传送点已经打开！" + "</color>";
                     jumpPoint.GetComponent<TeleportPoint>().locked = false;
-                    jumpText.text = "该传送点已经打开！";
+                    jumpText.text = "前往主界面";
                 }
                 break;
             case 3://打乱后重新加载

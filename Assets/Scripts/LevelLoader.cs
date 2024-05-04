@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 1f;
     // Start is called before the first frame update
     
-    void LoadNextLevel()
+    public void LoadNextLevel()
     {
         transition.SetTrigger("Start");
         //StartCoroutine(LoadLevel());
