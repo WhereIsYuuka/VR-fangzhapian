@@ -288,10 +288,10 @@ MonoBehaviour:
   affectMaterial: 1
   gripSqueeze:
     actionPath: /actions/default/in/Squeeze
-    needsReinit: 1
+    needsReinit: 0
   pinchSqueeze:
     actionPath: /actions/default/in/Squeeze
-    needsReinit: 1
+    needsReinit: 0
 --- !u!114 &114000012844786124
 MonoBehaviour:
   m_ObjectHideFlags: 0

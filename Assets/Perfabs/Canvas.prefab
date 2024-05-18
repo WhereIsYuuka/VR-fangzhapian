@@ -2525,8 +2525,9 @@ MonoBehaviour:
   BtnTip: {fileID: 3872417615519871257}
   BtnJump: {fileID: 848923291810380176}
   Reload: {fileID: 5886095482299030616}
-  jumpInput: {fileID: 7218025580725240272}
   TextAccuracy: {fileID: 6018092065664327821}
+  jumpPoint: {fileID: 0}
+  jumpText: {fileID: 0}
 --- !u!1 &6358949976958842131
 GameObject:
   m_ObjectHideFlags: 0

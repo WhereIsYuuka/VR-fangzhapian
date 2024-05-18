@@ -137,7 +137,7 @@ Material:
     - g_flReflectanceScale: 1
     m_Colors:
     - _BaseColor: {r: 0.854902, g: 0.854902, b: 0.854902, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.854902, g: 0.854902, b: 0.854902, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SceneTint: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
@@ -147,7 +147,7 @@ Material:
     - g_vWorldAlignedTexturePosition: {r: 0, g: 0, b: 0, a: 0}
     - g_vWorldAlignedTextureSize: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5563051433975664051
+--- !u!114 &4369604946494679068
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
