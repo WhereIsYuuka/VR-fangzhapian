@@ -229,8 +229,7 @@ namespace Valve.VR.InteractionSystem
 			currentArrow.transform.parent = null;
 
 			Arrow arrow = currentArrow.GetComponent<Arrow>();
-            arrow.StartRelease();
-            arrow.shaftRB.isKinematic = false;
+			arrow.shaftRB.isKinematic = false;
 			arrow.shaftRB.useGravity = true;
 			arrow.shaftRB.transform.GetComponent<BoxCollider>().enabled = true;
 
@@ -240,9 +239,6 @@ namespace Valve.VR.InteractionSystem
 
 			arrow.arrowHeadRB.AddForce( currentArrow.transform.forward * bow.GetArrowVelocity(), ForceMode.VelocityChange );
 			arrow.arrowHeadRB.AddTorque( currentArrow.transform.forward * 10 );
-
-			arrow.shaftRB.velocity = arrow.arrowHeadRB.velocity;
-			arrow.shaftRB.angularVelocity = arrow.arrowHeadRB.angularVelocity;
 
 			nocked = false;
             nockedWithType = GrabTypes.None;

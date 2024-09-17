@@ -24,39 +24,20 @@ namespace Valve.VR
         // to activate it in the process.
         public static bool active { get { return _instance != null; } }
 
-        private static bool? isSupported = null;
-
         // Set this to false to keep from auto-initializing when calling SteamVR.instance.
         private static bool _enabled = true;
         public static bool enabled
         {
             get
             {
-                if (_enabled)
-                {
 #if UNITY_2020_1_OR_NEWER || OPENVR_XR_API
-                    if (isSupported == null)
-                    {
-                        string[] supportedDevices = XRSettings.supportedDevices;
-                        for (int index = 0; index < supportedDevices.Length; index++)
-                        {
-                            if (supportedDevices[index].Contains("OpenVR"))
-                            {
-                                isSupported = true;
-                            }
-                        }
-                        if (isSupported == null)
-                        {
-                            isSupported = false;
-                        }
-                    }
-                    return isSupported.Value;
+                if (XRSettings.supportedDevices.Length == 0)
+                    enabled = false;
 #else
-                    return XRSettings.enabled;
+                if (!XRSettings.enabled)
+                    enabled = false;
 #endif
-                }
-
-                return false;
+                return _enabled;
             }
             set
             {

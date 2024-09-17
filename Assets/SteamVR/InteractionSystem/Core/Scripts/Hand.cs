@@ -1435,12 +1435,12 @@ namespace Valve.VR.InteractionSystem
 
         public void ShowGrabHint()
         {
-            ControllerButtonHints.ShowButtonHint(this, grabGripAction);
+            ControllerButtonHints.ShowButtonHint(this, grabGripAction); //todo: assess
         }
 
         public void HideGrabHint()
         {
-            ControllerButtonHints.HideTextHint(this, grabGripAction);
+            ControllerButtonHints.HideButtonHint(this, grabGripAction); //todo: assess
         }
 
         public void ShowGrabHint(string text)

@@ -101,7 +101,7 @@ namespace Valve.VR.InteractionSystem
                 if (!collisionsEnabled)
                 {
                     clearanceBuffer[0] = null;
-                    Physics.OverlapSphereNonAlloc(hand.objectAttachmentPoint.position, collisionReenableClearanceRadius, clearanceBuffer, clearanceCheckMask);
+                    Physics.OverlapSphereNonAlloc(hand.objectAttachmentPoint.position, collisionReenableClearanceRadius, clearanceBuffer);
                     // if we don't find anything in the vicinity, reenable collisions!
                     if (clearanceBuffer[0] == null)
                     {

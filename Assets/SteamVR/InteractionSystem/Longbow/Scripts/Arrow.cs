@@ -37,29 +37,11 @@ namespace Valve.VR.InteractionSystem
 
 		private GameObject scaleParentObject = null;
 
-		private float initialMass;
-		private float initialDrag;
-        private float initialAngularDrag;
-        private RigidbodyInterpolation initialInterpolation;
-        private CollisionDetectionMode initialCollisionDetection;
-        private bool initialUseGravity;
 
-
-        private void Awake()
-        {
-            initialMass = shaftRB.mass;
-            initialDrag = shaftRB.drag;
-            initialAngularDrag = shaftRB.angularDrag;
-            initialInterpolation = shaftRB.interpolation;
-            initialCollisionDetection = shaftRB.collisionDetectionMode;
-            initialUseGravity = shaftRB.useGravity;
-            Destroy(this.GetComponent<Rigidbody>());
-        }
-
-        //-------------------------------------------------
-        void Start()
-        {
-            Physics.IgnoreCollision(this.GetComponent<Collider>(), Player.instance.headCollider);
+		//-------------------------------------------------
+		void Start()
+		{
+			Physics.IgnoreCollision( shaftRB.GetComponent<Collider>(), Player.instance.headCollider );
 		}
 
 
@@ -70,35 +52,17 @@ namespace Valve.VR.InteractionSystem
 			{
 				prevPosition = transform.position;
 				prevRotation = transform.rotation;
-				prevVelocity = shaftRB.velocity;
+				prevVelocity = GetComponent<Rigidbody>().velocity;
 				prevHeadPosition = arrowHeadRB.transform.position;
 				travelledFrames++;
 			}
 		}
 
 
-		public void StartRelease()
-        {
-            Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
-            rb.isKinematic = true;
-            if (shaftRB == null)
-                shaftRB = rb;
-
-            shaftRB.mass = initialMass;
-            shaftRB.drag = initialDrag;
-            shaftRB.angularDrag = initialAngularDrag;
-			shaftRB.interpolation = initialInterpolation;
-			shaftRB.collisionDetectionMode = initialCollisionDetection;
-            shaftRB.useGravity = initialUseGravity;
-
-			arrowHeadRB.GetComponent<FixedJoint>().connectedBody = rb;
-        }
-
-
 		//-------------------------------------------------
 		public void ArrowReleased( float inputVelocity )
-        {
-            inFlight = true;
+		{
+			inFlight = true;
 			released = true;
 
 			airReleaseSound.Play();

@@ -4,7 +4,6 @@
 //
 //=============================================================================
 
-#if UNITY_UGUI_UI || !UNITY_2019_2_OR_NEWER
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -88,7 +87,3 @@ namespace Valve.VR.InteractionSystem
 	}
 #endif
 }
-#else
-using UnityEngine;
-namespace Valve.VR.InteractionSystem { public class UIElement : MonoBehaviour {} }
-#endif

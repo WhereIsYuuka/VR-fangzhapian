@@ -4,12 +4,9 @@
 //
 //=============================================================================
 
-#if UNITY_UGUI_UI || !UNITY_2019_2_OR_NEWER
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -230,7 +227,6 @@ namespace Valve.VR.InteractionSystem
 		{
 			if ( !string.IsNullOrEmpty( switchToScene ) )
 			{
-				StartCoroutine(LoadLevel());
 				SceneManager.LoadScene( switchToScene );
 				Debug.Log("<b>[SteamVR Interaction]</b> TeleportPoint: Hook up your level loading logic to switch to new scene: " + switchToScene, this);
 			}
@@ -240,11 +236,6 @@ namespace Valve.VR.InteractionSystem
 			}
 		}
 
-		IEnumerator LoadLevel()
-		{
-			GameObject.Find("LevelLoader").SendMessage("LoadNextLevel");
-			yield return new WaitForSeconds(1.0f);
-		}
 
 		//-------------------------------------------------
 		public void GetRelevantComponents()
@@ -362,19 +353,3 @@ namespace Valve.VR.InteractionSystem
 	}
 #endif
 }
-
-#else
-using UnityEngine;
-namespace Valve.VR.InteractionSystem { public class TeleportPoint : TeleportMarkerBase {
-        public override void Highlight(bool highlight) { }
-        public override void SetAlpha(float tintAlpha, float alphaPercent) { }
-        public override bool ShouldActivate(Vector3 playerPosition) { return false; }
-        public override bool ShouldMovePlayer() { return false; }
-        public override void TeleportPlayer(Vector3 pointedAtPosition) { }
-        public override void UpdateVisuals() { }
-        public bool playerSpawnPoint = false;
-        public enum TeleportPointType { MoveToLocation, SwitchToNewScene };
-        public TeleportPointType teleportType = TeleportPointType.MoveToLocation;
-		public void TeleportToScene() { }
-    } }
-#endif

@@ -1,11 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: UIElement that responds to VR hands and generates UnityEvents
-//
-//=============================================================================
-
-#if UNITY_UGUI_UI || !UNITY_2019_2_OR_NEWER
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -180,7 +173,3 @@ namespace Valve.VR.InteractionSystem.Sample
         }
     }
 }
-#else
-using UnityEngine;
-namespace Valve.VR.InteractionSystem.Sample { public class BuggyController : MonoBehaviour {} }
-#endif

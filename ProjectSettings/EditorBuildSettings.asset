@@ -21,7 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/school.unity
     guid: bb01797f2605c6c4695417b18f762a63
   m_configObjects:
-    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: d5de72925954dec47a7cfdf820dcb9a3,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 87e4aecd65a260e429c2854d901c1a8e,
+      type: 2}
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 47e0ae674780fa84292a6b6aed2e11bb,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 023f463bc020d924d8e59831adc90687,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 92c6d7f8bab90f04db40e37a6ebc5477,
       type: 2}

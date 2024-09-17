@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Valve.VR.InteractionSystem;
+// using Valve.VR.InteractionSystem;
 
 public class Answer : MonoBehaviour
 {
@@ -154,7 +154,7 @@ public class Answer : MonoBehaviour
                 else
                 {
                     tipsText.text = "<color=#27FF02FF>" + "恭喜你完成了所有题目，新的传送点已经打开！" + "</color>";
-                    jumpPoint.GetComponent<TeleportPoint>().locked = false;
+                    // jumpPoint.GetComponent<TeleportPoint>().locked = false;
                     jumpText.text = "前往主界面";
                 }
                 break;
